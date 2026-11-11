@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/labels.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+    <a href="/back" class="nav-link">Volver</a>
+</nav>
+
+<div class="form-container">
+
+    <h1>Poner ID de mantenimiento</h1>
+
+    <form action="/dashboard/salida_mant" method="post">
+
+        <div class="form-group">
+            <label for="id">Equipo:</label>
+            <input
+                type="text"
+                id="id"
+                name="id"
+                placeholder="Ingrese el ID del equipo"
+                required
+            >
+        </div>
+
+        <div class="form-actions">
+            <button type="submit">
+                Sacar de mantenimiento/reparación
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

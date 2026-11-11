@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+     <nav>
+        <a href="/logout" class="nav-link">Cerrar sesion</a>
+     </nav>
+    <h1>Gestion de activos</h1>
+    <br>
+    <br>
+    <p> Bienvenido/a {{nombre}} 👋, eres {{rol}}</p>
+
+<main class="dashboard-layout">
+
+<section class="stats-grid">
+
+    <a href="/dashboard/disponibles" class="stat-card">
+        <span class="stat-icon available">◇</span>
+        <span class="stat-title">Disponibles</span>
+        <span class="stat-number">{{ stats_disponibles.get(1, 0) }}</span>
+        <span class="stat-description">Equipos listos para asignar</span>
+    </a>
+
+    <a href="/dashboard/asignados" class="stat-card">
+        <span class="stat-icon assigned">▱</span>
+        <span class="stat-title">Asignados</span>
+        <span class="stat-number">{{ stats_disponibles.get(2, 0) }}</span>
+        <span class="stat-description">Equipos en uso</span>
+    </a>
+
+    <a href="/dashboard/reparaciones" class="stat-card">
+        <span class="stat-icon repair">⚒</span>
+        <span class="stat-title">Reparaciones</span>
+        <span class="stat-number">{{ stats_disponibles.get(3, 0) }}</span>
+        <span class="stat-description">Equipos en proceso</span>
+    </a>
+
+    <a href="/dashboard/damaged" class="stat-card">
+        <span class="stat-icon damaged">!</span>
+        <span class="stat-title">Dañados</span>
+        <span class="stat-number">{{ stats_disponibles.get(4, 0) }}</span>
+        <span class="stat-description">Pendientes de reparación</span>
+    </a>
+
+    <a href="/dashboard/retirados" class="stat-card">
+        <span class="stat-icon retired">▣</span>
+        <span class="stat-title">Retirados</span>
+        <span class="stat-number">{{ stats_disponibles.get(5, 0) }}</span>
+        <span class="stat-description">Equipos fuera de servicio</span>
+    </a>
+
+</section>
+
+<aside class="quick-actions">
+        <h2>Acciones rápidas</h2>
+
+        <div class="actions-grid">
+            <a href="/dashboard/agregar_equipo">Agregar equipo</a>
+            <a href="/dashboard/asignar">Asignar equipo</a>
+            <a href="/dashboard/m_damaged">Mandar a damaged</a>
+            <a href="/dashboard/m_reparacion">Mandar a reparación</a>
+        </div>
+    </aside>
+
+</main>
+    
+</body>
+</html>

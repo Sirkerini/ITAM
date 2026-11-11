@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/labels.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/back" class="nav-link">Volver</a>
+    </nav>
+
+<div class="form-container">
+    <h1>Mandar a Damaged</h1>
+
+    <form action="/dashboard/m_damaged" method="post">
+
+        <div class="form-group full-width">
+            <label for="id">Equipo:</label>
+            <input type="text" id="id" name="id" required>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit"
+                onclick="window.alert('Se agregó correctamente a damaged')">
+                Mandar a Damaged
+            </button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

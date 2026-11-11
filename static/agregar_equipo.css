@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #071426;
+    color: #e8eef7;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+    background: #0c1b2f;
+    border: 1px solid #1b3049;
+    border-radius: 12px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Encabezados */
+thead {
+    background: #10243d;
+}
+
+th {
+    text-align: left;
+    padding: 14px;
+    color: #91a4ba;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Celdas */
+td {
+    padding: 15px 14px;
+    border-bottom: 1px solid #1a2d44;
+    color: #d8e2ee;
+    font-size: 14px;
+}
+
+/* Hover */
+tbody tr {
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #10243d;
+}
+
+/* Última fila sin borde */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Navegación */
+nav {
+    margin-bottom: 30px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #10243d;
+    border: 1px solid #1b3049;
+    border-radius: 8px;
+
+    color: #91a4ba;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    background: #16304e;
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    th,
+    td {
+        padding: 11px;
+        font-size: 12px;
+    }
+}

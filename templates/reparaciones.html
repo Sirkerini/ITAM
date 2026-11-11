@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/agregar_equipo.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav><a href="/back" class="nav-link">Volver</a></nav>
+    <h1>Reparaciones</h1>
+
+    <div class="table-container"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre de equipo</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for persona in reparaciones %}
+                <tr>
+                    <td>{{ persona.id }}</td>
+                    <td>{{ persona.model }}</td>
+                    <td>{{ persona.name }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

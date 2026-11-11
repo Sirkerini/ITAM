@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/agregar_equipo.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+    <a href="/back" class="nav-link">Volver</a>
+</nav>
+
+<h1>Historial de mantenimiento</h1>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ID de equipo</th>
+                <th>Reportado por</th>
+                <th>Descripción</th>
+                <th>Fecha de inicio</th>
+                <th>Fecha de salida</th>
+                <th>Fecha de creación</th>
+                <th>Estado del equipo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for persona in result %}
+            <tr>
+                <td>{{ persona.id }}</td>
+                <td>{{ persona.equipo_id }}</td>
+                <td>{{ persona.reported_by }}</td>
+                <td>{{ persona.description }}</td>
+                <td>{{ persona.start_date }}</td>
+                <td>{{ persona.end_date }}</td>
+                <td>{{ persona.created_at }}</td>
+                <td>{{ persona.status_id }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

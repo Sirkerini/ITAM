@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #071426;
+    color: #e8eef7;
+    padding: 40px;
+}
+
+/* Navegación */
+nav {
+    margin-bottom: 30px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #10243d;
+    border: 1px solid #1b3049;
+    border-radius: 8px;
+
+    color: #91a4ba;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    background: #16304e;
+    color: #ffffff;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    max-width: 850px;
+    margin: 0 auto;
+
+    background: #0c1b2f;
+    border: 1px solid #1b3049;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+/* Título */
+h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* Grupo de cada campo */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Campos que ocupan todo el ancho */
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Labels */
+label {
+    margin-bottom: 8px;
+
+    color: #91a4ba;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Inputs, select y textarea */
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: #071426;
+    border: 1px solid #1b3049;
+    border-radius: 7px;
+
+    color: #e8eef7;
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: #63758a;
+}
+
+/* Focus */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3b82f6;
+    background: #0a1a2e;
+}
+
+/* Select */
+select {
+    cursor: pointer;
+}
+
+/* Opciones del select */
+select option {
+    background: #0c1b2f;
+    color: #e8eef7;
+}
+
+/* Textarea */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Contenedor del botón */
+.form-actions {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 5px;
+}
+
+/* Botón */
+button {
+    padding: 12px 22px;
+
+    background: #2563eb;
+    border: 1px solid #3b82f6;
+    border-radius: 7px;
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    border-color: #60a5fa;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .form-actions {
+        grid-column: auto;
+    }
+
+    button {
+        width: 100%;
+    }
+}
